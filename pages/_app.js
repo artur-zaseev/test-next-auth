@@ -1,15 +1,18 @@
-import "../styles/globals.css";
-import "tailwindcss/tailwind.css";
-import "animate.css/animate.min.css";
+import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
+import 'animate.css/animate.min.css';
 
-import MainLayout from "../layouts/MainLayout";
+import { Provider } from 'next-auth/client';
+import MainLayout from '../layouts/MainLayout';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <MainLayout>
-        <Component {...pageProps} />
-      </MainLayout>
+      <Provider session={pageProps.session}>
+        <MainLayout>
+          <Component {...pageProps} />
+        </MainLayout>
+      </Provider>
     </>
   );
 }

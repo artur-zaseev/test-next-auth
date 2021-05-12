@@ -19,3 +19,14 @@ export interface IEventType {
   id: number;
   text: string;
 }
+
+export interface ISession {
+  session: {
+    user: {
+      name: string;
+      email: string;
+      image: string;
+    };
+    expires: string;
+  };
+}

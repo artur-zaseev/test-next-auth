@@ -1,39 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 0,
-      "title": "json-server",
-      "content": "Lorem ipsum",
-      "author": {
-        "name": "Ivan",
-        "email": "hellow@baby.com"
-      }
-    },
-    {
-      "id": 1,
-      "title": "some server",
-      "author": {
-        "name": "Sergey",
-        "email": "testdata@baby.com"
-      }
-    },
-    {
-      "id": 2,
-      "title": "any server",
-      "author": {
-        "name": "Vasiliy",
-        "email": "sjhgdjshdgfj@baby.com"
-      }
-    },
-    {
-      "title": "Test title",
-      "author": {
-        "name": "Test User",
-        "email": "test-user-data@baby.com"
-      },
-      "id": 3
-    }
-  ],
   "places": [
     {
       "id": 0,
