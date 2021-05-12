@@ -15,7 +15,7 @@ const EventsList: React.FC = () => {
     getEvents();
   }, []);
 
-  return <div className="">{events.length && events.map((ev: IEvent) => <EventsListItem key={ev.id} {...ev} />)}</div>;
+  return <>{events.length && events.map((ev: IEvent) => <EventsListItem key={ev.id} {...ev} />)}</>;
 };
 
 export default EventsList;

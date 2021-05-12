@@ -1,5 +1,6 @@
-import Top from "../components/Top";
-import Calendar from "../components/Calendar";
+import Top from '../components/Top';
+import Calendar from '../components/Calendar';
+import Filter from '../components/Filter';
 
 const MainLayout: React.FC = ({ children }) => {
   return (
@@ -8,14 +9,14 @@ const MainLayout: React.FC = ({ children }) => {
         <div className="w-10/12 mx-auto">
           <Top />
           {/* Content */}
-          <div className="flex mt-5">
+          <div className="flex justify-between mt-5">
             {/* Sidebar */}
             <div className="w-3/12">
               <Calendar />
-              <h2>Фильтр</h2>
+              <Filter />
             </div>
             {/* Content */}
-            <div>{children}</div>
+            <div className="w-9/12">{children}</div>
           </div>
         </div>
       </div>
