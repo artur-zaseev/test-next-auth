@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 0,
+      "title": "json-server",
+      "content": "Lorem ipsum",
+      "author": {
+        "name": "Ivan",
+        "email": "hellow@baby.com"
+      }
+    },
+    {
+      "id": 1,
+      "title": "some server",
+      "author": {
+        "name": "Sergey",
+        "email": "testdata@baby.com"
+      }
+    },
+    {
+      "id": 2,
+      "title": "any server",
+      "author": {
+        "name": "Vasiliy",
+        "email": "sjhgdjshdgfj@baby.com"
+      }
+    },
+    {
+      "title": "Test title",
+      "author": {
+        "name": "Test User",
+        "email": "test-user-data@baby.com"
+      },
+      "id": 3
+    }
+  ],
+
+  "places": [{ "id": 0, "name": "JFC jazz club" }],
+
+  "tags": [
+    { "id": 0, "text": "Прогрессивно" },
+    { "id": 1, "text": "Спокойно" }
+  ],
+
+  "event_types": [{ "id": 0, "text": "Джаз" }],
+
+  "events": [
+    {
+      "id": 0,
+      "date": "2021-06-01",
+      "placeID": 0,
+      "tags": [0, 1],
+      "event_type": [0],
+      "title": "Кондаков - Волков - Багдасарьян",
+      "description": "Концептуальный джаз с ломаными ритмами",
+      "image": "kondakov_volkov_bagd.jpg",
+      "price_from": 700
+    }
+  ]
+}

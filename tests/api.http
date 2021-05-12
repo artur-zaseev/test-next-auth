@@ -1,0 +1,23 @@
+### 
+GET http://localhost:3004/posts/
+
+###
+GET http://localhost:3004/events/
+
+### 
+GET http://localhost:3004/tags?id=0&id=1
+
+### 
+GET http://localhost:3004/posts?id=1&id=2
+
+###
+POST http://localhost:3004/posts
+Content-Type: application/json
+
+{
+  "title": "Test title",
+	"author": {
+		"name": "Test User",
+		"email": "test-user-data@baby.com"
+	}
+}
