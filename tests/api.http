@@ -1,23 +1,24 @@
-### 
-GET http://localhost:3004/posts/
+@hostname = http://localhost
+@port = 3004
+@host = {{hostname}}:{{port}}
 
 ###
-GET http://localhost:3004/events/
+GET {{host}}/events
 
 ### 
-GET http://localhost:3004/tags?id=0&id=1
-
-### 
-GET http://localhost:3004/posts?id=1&id=2
+GET {{host}}/tags?id=0&id=1
 
 ###
-POST http://localhost:3004/posts
+POST {{host}}/events
 Content-Type: application/json
 
 {
-  "title": "Test title",
-	"author": {
-		"name": "Test User",
-		"email": "test-user-data@baby.com"
-	}
+	"date": "2021-07-01",
+	"placeID": 0,
+	"tags": [0, 1	],
+	"event_type": [0],
+	"title": "Просто какое-то событие",
+	"description": "Невероятное культурное событие",
+	"image": "unblivible.jpg",
+	"price_from": 1500
 }
