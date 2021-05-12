@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev && json-server --watch db.json --port 3004",
+    "dev": "npm run server & npm run next-dev",
     "server": "json-server --watch db.json --port 3004",
-    "build": "next build",
+    "next-dev": "next dev",
+    "next-build": "next build",
     "start": "next start"
   },
   "dependencies": {
