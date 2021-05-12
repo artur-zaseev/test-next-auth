@@ -18,6 +18,7 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "@types/lowdb": "^1.0.9",
     "@types/react": "^17.0.5",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.13",

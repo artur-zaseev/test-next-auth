@@ -1,9 +1,9 @@
-import { API_HOST } from '../options';
 import { IEvent, IEventType, ITag } from '../types';
 
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 export const fetchEvents = async (): Promise<IEvent[]> => {
-  const response = await fetch(`${API_HOST}/events`);
-  const data: IEvent[] = await response.json();
+  const data: IEvent[] = await fetcher(`/api/events`);
   return data;
 };
 
@@ -14,14 +14,11 @@ export const fetchEventTags = async (tags: number[]): Promise<string[]> => {
     index <= tags.length ? (params += `id=${tag}&`) : (params += `id=${tag}`);
   });
 
-  const response = await fetch(`${API_HOST}/tags?${params}`);
-  const data: ITag[] = await response.json();
-
+  const data: ITag[] = await fetcher(`/api/tags?${params}`);
   return data.map((i: ITag) => i.text);
 };
 
 export const fetchEventType = async (id: number): Promise<string> => {
-  const response = await fetch(`${API_HOST}/event_types?id=${id}`);
-  const data: IEventType[] = await response.json();
+  const data: IEventType[] = await fetcher(`/api/event_types?id=${id}`);
   return data[0].text;
 };
