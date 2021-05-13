@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getEvents } from './../../../database';
+import { getEvents } from './../../../database/database';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   res.status(200).json(await getEvents());

@@ -1,9 +1,11 @@
-import Image from 'next/image';
+import { GetServerSideProps } from 'next';
 import { useEffect, useState } from 'react';
 import { fetchEventTags, fetchEventType } from '../helpers/fetchers';
 import { IEvent } from '../types';
 
 const EventsListItem: React.FC<IEvent> = (props) => {
+  console.log('props: ', props);
+
   let [tags, setTags] = useState<string[]>([]);
   let [eventType, setEventType] = useState<string>('');
 
@@ -60,6 +62,12 @@ const EventsListItem: React.FC<IEvent> = (props) => {
       </div>
     </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: { xxxxxxxxxxxxxxxxxxx: 'Hellow' },
+  };
 };
 
 export default EventsListItem;
